@@ -1,15 +1,15 @@
 # Compiler
-CC = g++
-TARGET = student
+# Makefile
 
-all: $(TARGET)
+all: university
 
-$(TARGET): student.cpp
-	$(CC) student.cpp -o $(TARGET)
+university: university.cpp
+	g++ -o university university.cpp
+
+test: university
+	bash test.sh
 
 clean:
-	rm -f $(TARGET)
+	rm -f university
 
-test: $(TARGET)
-	bash test.sh
 
